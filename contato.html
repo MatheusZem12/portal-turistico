@@ -74,9 +74,26 @@
                             <script>
                                 document.querySelector('form').addEventListener('submit', function(e) {
                                     e.preventDefault();
-                                    alert('✅ Mensagem enviada com sucesso!\n\nEm breve nossa equipe entrará em contato. Obrigado pelo interesse em conhecer o Brasil Encantado!');
+                                    showToast('Mensagem enviada com sucesso! Em breve entraremos em contato.');
                                     this.reset();
                                 });
+
+                                function showToast(msg) {
+                                    var toast = document.createElement('div');
+                                    toast.className = 'toast';
+                                    toast.innerHTML =
+                                        '<span class="toast-icon">✅</span>' +
+                                        '<span>' + msg + '</span>' +
+                                        '<button class="toast-close" onclick="dismissToast(this.parentElement)">✕</button>';
+                                    document.body.appendChild(toast);
+                                    setTimeout(function() { dismissToast(toast); }, 5000);
+                                }
+
+                                function dismissToast(toast) {
+                                    if (!toast) return;
+                                    toast.classList.add('hide');
+                                    setTimeout(function() { toast.remove(); }, 350);
+                                }
                             </script>
                         </div>
 

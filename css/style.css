@@ -705,6 +705,61 @@ section {
     to { opacity: 1; }
 }
 
+/* ===== Toast Notification ===== */
+.toast {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    background: var(--green);
+    color: #fff;
+    padding: 16px 22px;
+    border-radius: 10px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.97rem;
+    font-weight: 500;
+    z-index: 9999;
+    animation: toastIn 0.35s ease;
+    max-width: 340px;
+}
+
+.toast-icon {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+.toast-close {
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    opacity: 0.8;
+    padding: 0 0 0 8px;
+    line-height: 1;
+}
+
+.toast-close:hover {
+    opacity: 1;
+}
+
+.toast.hide {
+    animation: toastOut 0.35s ease forwards;
+}
+
+@keyframes toastIn {
+    from { opacity: 0; transform: translateX(60px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes toastOut {
+    from { opacity: 1; transform: translateX(0); }
+    to   { opacity: 0; transform: translateX(60px); }
+}
+
 .fade-in {
     animation: fadeIn 0.8s ease;
 }
