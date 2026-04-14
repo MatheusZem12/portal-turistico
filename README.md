@@ -42,9 +42,13 @@ Desenvolvido com **HTML5 semântico** e **CSS externo**, utilizando Flexbox para
 |-----------------------|------------|
 | Matheus Lajarin Zem   | 202110232  |
 
+## Link do Repositório Publicado
+
+https://github.com/MatheusZem12/portal-turistico
+
 ## Link do Site Publicado
 
-
+https://matheuszem12.github.io/portal-turistico/
 
 ---
 

@@ -71,6 +71,13 @@
                                 </div>
                                 <button type="submit" class="btn btn-secondary">Enviar Mensagem</button>
                             </form>
+                            <script>
+                                document.querySelector('form').addEventListener('submit', function(e) {
+                                    e.preventDefault();
+                                    alert('✅ Mensagem enviada com sucesso!\n\nEm breve nossa equipe entrará em contato. Obrigado pelo interesse em conhecer o Brasil Encantado!');
+                                    this.reset();
+                                });
+                            </script>
                         </div>
 
                         <div class="contact-info-box">
