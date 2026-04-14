@@ -19,6 +19,7 @@ Desenvolvido com **HTML5 semântico** e **CSS externo**, utilizando Flexbox para
 - CSS3 (estilização externa)
 - Flexbox (layout)
 - Media Queries (responsividade)
+- Google Fonts (tipografia: Poppins e Playfair Display)
 - JavaScript (notificação toast no formulário)
 
 ## Estrutura do Projeto
